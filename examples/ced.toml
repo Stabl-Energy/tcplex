@@ -1,0 +1,11 @@
+[server.cedA]
+port = 8001
+target = ["master"]
+
+[server.cedB]
+port = 8002
+target = ["master"]
+
+[client.master]
+addr = "10.20.0.50:64646"
+target = ["cedA", "cedB"]

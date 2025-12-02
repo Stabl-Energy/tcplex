@@ -1,0 +1,10 @@
+# Test configuration with intentional routing loop
+# Server and client form a feedback loop for testing
+
+[server.s]
+port = 8000
+target = ["c"]
+
+[client.c]
+addr = "127.0.0.1:8000"
+target = ["s"]
